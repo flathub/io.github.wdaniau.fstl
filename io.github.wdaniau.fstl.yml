@@ -19,5 +19,5 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: git
-        commit: d117bf3970ac54dc8c31e517dfb1bdc0c9c935bf
+        commit: 3b2a74db72e723390469b48489732b50f3493549
         url: https://github.com/wdaniau/fstl
