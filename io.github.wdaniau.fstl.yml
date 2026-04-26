@@ -1,6 +1,6 @@
 id: io.github.wdaniau.fstl
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: '5.15-25.08'
 sdk: org.kde.Sdk
 command: fstl-e
 rename-desktop-file: fstlapp-fstl-e.desktop
@@ -17,7 +17,10 @@ finish-args:
 modules:
   - name: fstl-e
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
-        commit: 9ee9b5bb8c346dd6f0a058f98a77b75d22831054
         url: https://github.com/wdaniau/fstl
+        tag: fstl-e-v1.2.0
+        commit: 9ee9b5bb8c346dd6f0a058f98a77b75d22831054
