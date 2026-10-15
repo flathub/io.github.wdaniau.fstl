@@ -21,4 +21,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/wdaniau/fstl
-        commit: 23cdbafbe8d98b91ea88fa739f538cb9f13f7aa7
+        commit: 933c78acac187dbeced44a315080634f643d507c
