@@ -7,8 +7,7 @@ rename-desktop-file: fstlapp-fstl-e.desktop
 rename-icon: fstlapp-fstl-e
 finish-args:
   - --share=ipc
-  - --socket=fallback-x11
-  - --socket=wayland
+  - --socket=x11
   - --device=dri
   - --filesystem=home
   - --filesystem=xdg-run/gvfs # make GnomeVFS accessible
@@ -22,5 +21,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/wdaniau/fstl
-        tag: fstl-e-v1.2.0
-        commit: 9ee9b5bb8c346dd6f0a058f98a77b75d22831054
+        commit: 933c78acac187dbeced44a315080634f643d507c
