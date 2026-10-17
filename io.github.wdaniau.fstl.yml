@@ -1,6 +1,6 @@
 id: io.github.wdaniau.fstl
 runtime: org.kde.Platform
-runtime-version: '5.15-25.08'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: fstl-e
 rename-desktop-file: fstlapp-fstl-e.desktop
@@ -13,12 +13,14 @@ finish-args:
   - --filesystem=xdg-run/gvfs # make GnomeVFS accessible
   - --filesystem=/run/media
   - --filesystem=/media
+  - --env=QT_QPA_PLATFORM=xcb
 modules:
   - name: fstl-e
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      - -DQT_DESIRED_VERSION=6
     sources:
       - type: git
         url: https://github.com/wdaniau/fstl
-        commit: 933c78acac187dbeced44a315080634f643d507c
+        commit: a5298cdbb6ad72abd0043ccb52b5820c6c98d501
